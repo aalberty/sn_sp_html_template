@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>global.HTMLTemplateUtil</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>Load HTML from a record.</description>
+        <name>HTMLTemplateUtil</name>
+        <script><![CDATA[var HTMLTemplateUtil = Class.create();
+HTMLTemplateUtil.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	getHTMLFromConfig: function () {
+		var propName = this.getParameter("sysparm_config");
+
+		try {
+			var config = JSON.parse(gs.getProperty(propName));
+			return this._getHTML(config.table, config.sys_id, config.fieldName);
+		} catch (e) {
+			gs.warn("Error parsing system property containing config information. " + e);
+			return false;
+		}
+
+	},
+
+	getHTML: function () {
+		var table = this.getParameter("sysparm_table");
+		var recId = this.getParameter("sysparm_id");
+		var fieldName = this.getParameter("sysparm_field");
+		return this._getHTML(table, recId, fieldName);
+	},
+
+	_getHTML: function (table, recId, fieldName) {
+		var htmlRec = new GlideRecord(table);
+		if (htmlRec.get(recId)) {
+			return htmlRec.getValue(fieldName);
+		}
+		return false;
+	},
+	
+    type: 'HTMLTemplateUtil'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>talberty</sys_created_by>
+        <sys_created_on>2023-06-03 21:12:15</sys_created_on>
+        <sys_id>918e8cdc47972110e83a2778c26d436b</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>HTMLTemplateUtil</sys_name>
+        <sys_package display_value="HTML Template Util" source="2c7e0cdc47972110e83a2778c26d436d">2c7e0cdc47972110e83a2778c26d436d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HTML Template Util">2c7e0cdc47972110e83a2778c26d436d</sys_scope>
+        <sys_update_name>sys_script_include_918e8cdc47972110e83a2778c26d436b</sys_update_name>
+        <sys_updated_by>talberty</sys_updated_by>
+        <sys_updated_on>2023-06-03 21:41:57</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="HTML Template Util">2c7e0cdc47972110e83a2778c26d436d</application>
+        <file_path/>
+        <instance_id>ea9e6024dbd51d9442b321c4059619ae</instance_id>
+        <instance_name>dev131274</instance_name>
+        <name>sys_script_include_918e8cdc47972110e83a2778c26d436b</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;global.HTMLTemplateUtil&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description&gt;Load HTML from a record.&lt;/description&gt;&lt;name&gt;HTMLTemplateUtil&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var HTMLTemplateUtil = Class.create();
+HTMLTemplateUtil.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	getHTMLFromConfig: function () {
+		var propName = this.getParameter("sysparm_config");
+
+		try {
+			var config = JSON.parse(gs.getProperty(propName));
+			return this._getHTML(config.table, config.sys_id, config.fieldName);
+		} catch (e) {
+			gs.warn("Error parsing system property containing config information. " + e);
+			return false;
+		}
+
+	},
+
+	getHTML: function () {
+		var table = this.getParameter("sysparm_table");
+		var recId = this.getParameter("sysparm_id");
+		var fieldName = this.getParameter("sysparm_field");
+		return this._getHTML(table, recId, fieldName);
+	},
+
+	_getHTML: function (table, recId, fieldName) {
+		var htmlRec = new GlideRecord(table);
+		if (htmlRec.get(recId)) {
+			return htmlRec.getValue(fieldName);
+		}
+		return false;
+	},
+	
+    type: 'HTMLTemplateUtil'
+});]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;talberty&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-06-03 21:12:15&lt;/sys_created_on&gt;&lt;sys_id&gt;918e8cdc47972110e83a2778c26d436b&lt;/sys_id&gt;&lt;sys_mod_count&gt;11&lt;/sys_mod_count&gt;&lt;sys_name&gt;HTMLTemplateUtil&lt;/sys_name&gt;&lt;sys_package display_value="HTML Template Util" source="2c7e0cdc47972110e83a2778c26d436d"&gt;2c7e0cdc47972110e83a2778c26d436d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="HTML Template Util"&gt;2c7e0cdc47972110e83a2778c26d436d&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_918e8cdc47972110e83a2778c26d436b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;talberty&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-06-03 21:41:57&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1577323183</payload_hash>
+        <record_name>HTMLTemplateUtil</record_name>
+        <reverted_from/>
+        <source>bbcb8b86c59021108c8b506e733c4c8d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>talberty</sys_created_by>
+        <sys_created_on>2023-06-03 21:41:57</sys_created_on>
+        <sys_id>998518d447d72110e83a2778c26d432f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1888335be0a0000001</sys_recorded_at>
+        <sys_updated_by>talberty</sys_updated_by>
+        <sys_updated_on>2023-06-03 21:41:57</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>918518d41dd721102f1d22f72e01c12f</update_guid>
+        <update_guid_history>918518d41dd721102f1d22f72e01c12f:1577323183,7465dc9455d72110465d6df22ab39e6c:-1270144443,f035dc943ed72110629403c37d6de568:748765464,2835989443d721100a8e361fb49888e6:-1666025615,cf055894dad721101b07792d6099475d:-1541813182,0005dc9449d7211065ebdd7f74a60f63:2088985774,1ff49c94b9d72110cfd4f4cb5a7ff5a6:-2103508657,57c4989480d72110522a7a480d9c5de1:-824151905,14c49894fed721108c2e5a77c809eedd:1249852138,fdf298143bd72110c754a7507329d576:-8681206,aee2981439d72110f0730f88017af82b:1161238728,d2bec8d84a972110c56fe8e50b78dea9:1656186755</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>talberty</sys_created_by>
+        <sys_created_on>2023-06-05 15:28:55</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>9804469243f440409e16aa5ca7c90400</sys_id>
+        <sys_metadata>918e8cdc47972110e83a2778c26d436b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HTMLTemplateUtil</sys_name>
+        <sys_package display_value="HTML Template Util" source="2c7e0cdc47972110e83a2778c26d436d">2c7e0cdc47972110e83a2778c26d436d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="HTML Template Util">2c7e0cdc47972110e83a2778c26d436d</sys_scope>
+        <sys_scope_delete display_value="">2d7197783f6b4ccdabf431f154487ea1</sys_scope_delete>
+        <sys_update_name>sys_script_include_918e8cdc47972110e83a2778c26d436b</sys_update_name>
+        <sys_update_version display_value="sys_script_include_918e8cdc47972110e83a2778c26d436b">998518d447d72110e83a2778c26d432f</sys_update_version>
+        <sys_updated_by>talberty</sys_updated_by>
+        <sys_updated_on>2023-06-05 15:28:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_query_parameter_map">
+    <sys_ws_query_parameter_map action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_ws_query_parameter_map</sys_class_name>
+        <sys_created_by>talberty</sys_created_by>
+        <sys_created_on>2023-06-04 14:33:23</sys_created_on>
+        <sys_id>f7fcff1047d76110e83a2778c26d434b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>984b73dc47976110e83a2778c26d436c</sys_name>
+        <sys_package display_value="HTML Template Util" source="2c7e0cdc47972110e83a2778c26d436d">2c7e0cdc47972110e83a2778c26d436d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HTML Template Util">2c7e0cdc47972110e83a2778c26d436d</sys_scope>
+        <sys_update_name>sys_ws_query_parameter_map_f7fcff1047d76110e83a2778c26d434b</sys_update_name>
+        <sys_updated_by>talberty</sys_updated_by>
+        <sys_updated_on>2023-06-04 14:33:23</sys_updated_on>
+        <web_service_operation display_value="template">42cbbbdc47976110e83a2778c26d43a9</web_service_operation>
+        <web_service_query_parameter display_value="template_config">984b73dc47976110e83a2778c26d436c</web_service_query_parameter>
+    </sys_ws_query_parameter_map>
+</record_update>

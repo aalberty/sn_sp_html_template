@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_query_parameter">
+    <sys_ws_query_parameter action="INSERT_OR_UPDATE">
+        <example_value>x_324004_folder_st.folderDirective.htmlTemplate</example_value>
+        <name>template_config</name>
+        <required>false</required>
+        <short_description>Sys property name containing the config data for the html template</short_description>
+        <sys_class_name>sys_ws_query_parameter</sys_class_name>
+        <sys_created_by>talberty</sys_created_by>
+        <sys_created_on>2023-06-04 14:27:49</sys_created_on>
+        <sys_id>984b73dc47976110e83a2778c26d436c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>template_config</sys_name>
+        <sys_package display_value="HTML Template Util" source="2c7e0cdc47972110e83a2778c26d436d">2c7e0cdc47972110e83a2778c26d436d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HTML Template Util">2c7e0cdc47972110e83a2778c26d436d</sys_scope>
+        <sys_update_name>sys_ws_query_parameter_984b73dc47976110e83a2778c26d436c</sys_update_name>
+        <sys_updated_by>talberty</sys_updated_by>
+        <sys_updated_on>2023-06-04 14:27:49</sys_updated_on>
+        <web_service_definition display_value="HTMLTemplate ">f8ca3b9c47976110e83a2778c26d4331</web_service_definition>
+    </sys_ws_query_parameter>
+</record_update>
