@@ -1,0 +1,1 @@
+Normally, directives created as an Angular Provider record in ServiceNow have their HTML template included as a multiline string. This util is to allow for directive HTML to be written in an Angular ng Template record, then retrieved via api endpoint at runtime so that a directive may be written with `templateUrl` instead of the normal inline content.
